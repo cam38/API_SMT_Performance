@@ -35,89 +35,63 @@ export class Moto {
   @Field()
   coloris: string
 
+  //caractéristiques moteur
   @Field()
-  moteur: Moteur
+  type_moteur: string
 
   @Field()
-  freins_et_suspensions: Frein_et_Suspension
+  cylindree: number
 
   @Field()
-  performances_et_transmission: Performances_et_Transmission
+  systeme_demarrage: string
+
+  //caractéristiques freins et suspensions
+  @Field()
+  freins_avant: string
 
   @Field()
-  chassis_et_dimensions: Chassis_et_Dimensions
+  freins_arriere: string
 
+  @Field()
+  suspension_avant: string
+
+  @Field()
+  suspension_arriere: string
+
+  //caractéristiques performances et transmission
+  @Field()
+  puissance_max: number
+
+  @Field()
+  transmission: string
+
+  @Field()
+  embrayage: string
+
+  //caractéristiques chassis et dimensions
+
+  @Field()
+  type_cadre: string
+
+  @Field()
+  chasse: number
+
+  @Field()
+  longueur: number
+
+  @Field()
+  largeur: number
+
+  @Field()
+  hauteur: number
+
+  @Field()
+  capacite_carburant: number
+
+  @Field()
+  poids: number
+
+  // description du modèle
   @Field()
   description: string
-}
-
-//Classe correspondant à des caractéristiques du moteur
-export class Moteur{
-
-    @Field()
-    type: string
-
-    @Field()
-    cylindree: number
-
-    @Field()
-    alesage_x_course: [number,number]
-
-    @Field()
-    systeme_demarrage: string
-}
-
-//Classe correspondant à des caractéristiques des freins et des suspensions du modèle
-export class Frein_et_Suspension {
-
-    @Field()
-    freins_avant: string
-
-    @Field()
-    freins_arriere: string
-
-    @Field()
-    suspension_avant: string
-
-    @Field()
-    suspension_arriere: string
-
-}
-
-//Classe correspondant à des caractéristiques des perf/transmission du modèle
-export class Performances_et_Transmission {
-
-    @Field()
-    puissance_max: number
-
-    @Field()
-    transmission: string
-
-    @Field()
-    raports_vitesse: [number,number,number,number,number,number]
-
-    @Field()
-    embrayage: string
-}
-
-//Classe correspondant à des caractéristiques du chassis et des dimensions du modèle
-export class Chassis_et_Dimensions {
-
-    @Field()
-    type_cadre: string
-
-    @Field()
-    chasse: number
-
-    @Field()
-    debattement: [number,number]
-
-    @Field()
-    dimensions: [number,number,number] //Lxlxh
-
-    @Field()
-    capacite_carburant: number
-
-    @Field()
-    poids: number
 }

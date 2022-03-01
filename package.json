@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npm install express apollo-server-express graphql reflect-metadata type-graphql class-validator",
-    "start": "nodemon --exec ts-node src/index.ts"
+    "start": "nodemon --exec ts-node index.ts"
   },
   "repository": {
     "type": "git",
@@ -26,11 +26,15 @@
     "nodemon": "^2.0.15"
   },
   "dependencies": {
-    "apollo-server-express": "^3.6.3",
+    "apollo-server-express": "^2.25.3",
     "class-validator": "^0.13.2",
     "express": "^4.17.3",
-    "graphql": "^16.3.0",
+    "graphql": "^15.7.2",
+    "grep": "^0.1.0",
+    "node": "^17.5.0",
+    "ps": "^1.0.0",
     "reflect-metadata": "^0.1.13",
-    "type-graphql": "^1.1.1"
+    "type-graphql": "1.1.1",
+    "typescript": "^4.6.2"
   }
 }
