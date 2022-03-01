@@ -23,7 +23,7 @@ export class TodoInput implements Partial<Todo> {
   description: string
 }
 
-
+/* USING GraphQL
 type Todo {
     id: ID!
     title: String!
@@ -35,3 +35,4 @@ type Todo {
     title: String!
     description: String!
   }
+*/
