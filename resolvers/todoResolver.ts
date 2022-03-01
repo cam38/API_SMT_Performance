@@ -1,13 +1,13 @@
 import { Query, Resolver} from 'type-graphql'
-import { Todo} from '../schemas/Todo'
+import { Moto} from '../schemas/Todo'
 
-@Resolver((of) => Todo)
+@Resolver((of) => Moto)
 export class TodoResolver {
-  private todos: Todo[] = []
+  private todos: Moto[] = []
 
-  @Query((returns) => [Todo], { nullable: true})
+  @Query((returns) => [Moto], { nullable: true})
 
-  getTodos(): Todo[] {
+  getTodos(): Moto[] {
     return this.todos
   }
 }
