@@ -6,7 +6,16 @@ export class Todo {
   id: number
 
   @Field()
+  marque: string
+
+  @Field()
+  categorie: string
+
+  @Field()
   modele: string
+
+  @Field()
+  coloris: string
 
   @Field()
   description: string
