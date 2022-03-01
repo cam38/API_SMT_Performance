@@ -1,5 +1,5 @@
 import { Query, Resolver} from 'type-graphql'
-import { Moto} from '../schemas/Todo'
+import { Moto} from '../schemas/moto'
 
 @Resolver((of) => Moto)
 export class TodoResolver {
