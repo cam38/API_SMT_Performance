@@ -3,11 +3,11 @@ import { ApolloServer } from 'apollo-server-express'
 import * as Express from 'express'
 import { buildSchema } from 'type-graphql'
 
-import { TodoResolver } from './resolvers/todoResolver'
+import { MotoResolver } from './resolvers/motoResolver'
 
 async function main() {
   const schema = await buildSchema({
-    resolvers: [TodoResolver],
+    resolvers: [MotoResolver],
     emitSchemaFile: true,
   })
 
