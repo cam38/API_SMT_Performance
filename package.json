@@ -1,3 +1,27 @@
-"scripts": {
-    "start": "nodemon --exec ts-node src/index.ts"
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm install express apollo-server-express graphql reflect-metadata type-graphql class-validator"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cam38/API_SMT_Performance.git"
+  },
+  "keywords": [
+    "Claracam_17"
+  ],
+  "author": "cam38",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cam38/API_SMT_Performance/issues"
+  },
+  "homepage": "https://github.com/cam38/API_SMT_Performance#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.21",
+    "nodemon": "^2.0.15"
+  }
 }
