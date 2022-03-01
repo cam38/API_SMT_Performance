@@ -1,5 +1,20 @@
 import { Field, ObjectType} from 'type-graphql'
 
+/* 
+On définit un schéma pour un modèle de moto. Ici, un modèle de moto est définie à partir : 
+- d'un identifiant
+- d'une marque 
+- d'une catégorie (tout-terrain, sport, route ...)
+- d'un modèle
+- d'une image du modèle de la moto
+- d'une couleur
+- des caractéristiques de : 1. son moteur
+                            2. ses freins & suspensions
+                            3. de ses performances & transmissions
+                            4. de son chassis et de ses dimensions
+*/
+
+// Classe du modèle de la moto
 @ObjectType()
 export class Moto {
   @Field()
@@ -15,7 +30,10 @@ export class Moto {
   modele: string
 
   @Field()
-  photo: Photo
+  photo: string
+
+  @Field()
+  coloris: string
 
   @Field()
   moteur: Moteur
@@ -33,43 +51,24 @@ export class Moto {
   description: string
 }
 
-export class Photo {
-
-    @Field()
-    id: number
-
-    @Field()
-    chemin_image: string
-
-    @Field()
-    coloris: string
-}
-
+//Classe correspondant à des caractéristiques du moteur
 export class Moteur{
-
-    @Field()
-    id: number
 
     @Field()
     type: string
 
     @Field()
-    cylindre: number
+    cylindree: number
 
     @Field()
     alesage_x_course: [number,number]
 
     @Field()
-    taux_compression: string
-
-    @Field()
     systeme_demarrage: string
 }
 
+//Classe correspondant à des caractéristiques des freins et des suspensions du modèle
 export class Frein_et_Suspension {
-
-    @Field()
-    id: number
 
     @Field()
     freins_avant: string
@@ -85,10 +84,8 @@ export class Frein_et_Suspension {
 
 }
 
+//Classe correspondant à des caractéristiques des perf/transmission du modèle
 export class Performances_et_Transmission {
-
-    @Field()
-    id: number
 
     @Field()
     puissance_max: number
@@ -103,10 +100,8 @@ export class Performances_et_Transmission {
     embrayage: string
 }
 
+//Classe correspondant à des caractéristiques du chassis et des dimensions du modèle
 export class Chassis_et_Dimensions {
-
-    @Field()
-    id: number
 
     @Field()
     type_cadre: string
@@ -118,7 +113,7 @@ export class Chassis_et_Dimensions {
     debattement: [number,number]
 
     @Field()
-    dimensions: [number,number,number]
+    dimensions: [number,number,number] //Lxlxh
 
     @Field()
     capacite_carburant: number
